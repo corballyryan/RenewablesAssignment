@@ -82,11 +82,11 @@ while i < 10:
     j = 0
     temp = 0
     while j < 10:    
-        temp = temp + (production[j] * distance(longitude[i], latitude[i], longitude[j], latitude[j])        
+        temp = temp + (production[j] * distance(latitude[i], longitude[i], latitude[j], longitude[j])        
         j += 1
     k = 0
     while k < 3:
-        totalCost = temp * distance(longitude[i], latitude[i], portLongitude[k], portLatitude[k])
+        totalCost = temp * distance(latitude[i], longitude[i], portLatitude[k], portLongitude[k])
         portCostList[p] = totalCost  '''Creates a list of 30 floating point numbers representing each of 3 ports for each location'''
         p += 1
     i+=1
