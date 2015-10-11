@@ -1,0 +1,23 @@
+MIS40750 Analytics Research and Implementation
+
+Renewables – Plant Location Problem
+
+Declan Ryan 96322586
+
+Goal
+The goal of this assignment is to access the database renewables.db, extract the data from it and use this data to solve the problem of where this company should build it’s new production plant.  The database contains the longitude and latitude coordinates for 10 existing plant locations, the amount of raw materials produced at each location and the longitude and latitude coordinates of 3 ports.  The goal is to determine the location to build the new plant in order to minimize transport costs by taking into consideration the amount of raw materials produced at each of the existing locations, distance between locations and the distances from each location to 3 possible ports used to move produce abroad.  
+
+Method
+The method used in this program is based around a function called ‘distance’ which calculates the distance between two points given the longitude and latitude for both points.  The main method within this program is a series of ‘while’ loops, within which the distance function is called several times.  
+
+For each location the distance between it and the other 9 locations is calculated.  These 9 distances are then multiplied by their corresponding production quantities.  These values are then added together to determine a transportation cost for all raw materials to the location under investigation.  Units were not taken to be important as it was a comparison study between all 10 locations.  
+
+For each of the 10 locations a nominal cost was calculated with respect to getting all the raw materials to the location(as above) and then transporting all this material to each of 3 ports.  These 3 nominal values were added to a list called portCostList.  With 3 port cost values for each location, this resulted in 30 values in the portCostList.  An ‘if’ statement within a ‘while’ loop was then used to determine which was the most economical option.  Based on the index of this best option within the portCostList, the best location and port was determined.  
+
+
+Solution
+Owing to one or more bugs within the program code and a lack of time in which to debug it, this program does not provide a solution to the problem.  
+
+
+
+
